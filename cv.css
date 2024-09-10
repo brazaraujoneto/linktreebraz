@@ -1,0 +1,43 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 50px;
+  background-image: url(/IMAGENS/fundobranco.jpg);
+}
+.name{
+  text-align: center;
+}
+.name img {
+  display: flex;
+  width: 165px; 
+  margin: auto;
+  
+}
+.name p{
+  color:blueviolet;
+}
+#perfilexp{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#perfilexp h2{
+  margin-top: 60px;
+}
+
+#icones h2{
+  margin-top: 60px; 
+}
+#icones {
+  display: flex;
+  justify-items: center;
+  gap: 35px;
+  margin-top: 35px;
+  margin-left: 10%;
+  font-size: 40px; /*mudando tamanho dos elementos dentro do id */
+}
+#list ul {
+ font-size: 12px;
+  justify-items: center;
+  gap: 35px;
+  margin-top: 35px;
+  margin-left: 10%;
+}

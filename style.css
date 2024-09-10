@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Mudar o tema para light */
+:root{
+  --text-color: white;
+  --bg-url: url(/assets/assets/bg-mobile.jpg);
+  --stroke-color: rgb(255, 255, 255, 0.5);
+  --surface-color: rgb(255, 255, 255, 0.1);
+  --surface-color-hover: rgb(255, 255, 255, 0.06);
+  --highlight-color: rgb(255, 255, 255, 0.02);
+}
+.light{
+  --text-color: black;
+  --bg-url: url(/assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgb(0, 0, 0, 0.5);
+  --surface-color: rgb(0, 0, 0, 0.1);
+  --surface-color-hover: rgb(255, 255, 255, 0.06);
+  --highlight-color: rgb(0, 0, 0, 0.1);
+}
+body {
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+body * {
+  color: var(--text-color);
+  font-family: "Ubuntu", sans-serif;
+}
+#conteiner1{
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+#imgperfil {
+  text-align: center;
+  padding: 24px;
+}
+#imgperfil img{
+  display: block;
+  width: 112px; 
+  margin:auto;
+}
+#imgperfil p{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 50px;
+  backdrop-filter: 4px;
+  -webkit-backdrop-filter: 4px;
+ text-decoration: none; /*remover linha do link */ 
+  font-weight: 500;
+  transition: all background 0.05s ;
+}
+ul li a:hover{
+  background-color: var(--surface-color-hover);
+  border: 1.8px solid rgb(85, 26, 161);
+}
+#socialicon{
+  display: flex;
+  justify-items: center; /*centraliza os itens */
+  gap: 32px;
+  padding: 1c6px 0;
+  font-size: 24px; /*mudando tamanho dos elementos dentro do id */
+  margin-top: 50px;
+}
+
+#socialicon a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  transition: 50%;
+  position: relative;
+  box-sizing: border-box; 
+}
+
+#socialicon a:hover {
+  background: var(--highlight-color);
+  border-radius: 15%;
+  transform: scale(1.6); /* Aumenta o tamanho do ícone em 10% */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  /* Compensar o salto do padding */
+  margin-top: -10px; /* Ajuste o valor para compensar o scale */
+}
+.frase-redes {
+  text-align: center; /* Centraliza a frase */
+  margin-top: 80px; /* Adiciona um espaço acima da frase */
+}
