@@ -66,6 +66,10 @@ body * {
 #switch span{
   width: 32px; /*altura*/
   height: 32px; /*largura*/
+  background: var(--surface-color);
+  border: 1,5px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-radius: 9999px;
 }
 ul{
   list-style: none;
