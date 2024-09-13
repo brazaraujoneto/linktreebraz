@@ -53,23 +53,53 @@ body * {
   line-height: 24px;
   margin-top: 8px;
 }
-/* switch - botao*/
-#switch button {
-  width: 32px; /*altura*/
-  height: 32px; /*largura*/
-  background: white var(--switch-bg-url) no-repeat center;
-  border: 0;
-  border-radius: 50%;
-  position: relative;
-  bottom: 15px;
+
+/* switch - botão */
+#switch {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  margin-bottom: 20px;
+  position: relative; /* Define position: relative para #switch */
+  margin: 4px auto;
+  width: 64px; /* Largura do contêiner pai, ajuste conforme necessário */
+  height: 24px; /* Altura do contêiner pai, ajuste conforme necessário */
+  margin-bottom: 20px; /*margem*/
 }
-#switch span{
-  width: 32px; /*altura*/
-  height: 32px; /*largura*/
-  background: var(--surface-color);
-  border: 1,5px solid var(--stroke-color);
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: var(--switch-bg-url);
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-position: center; /* Centraliza a imagem dentro do botão */
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir o botão */
+  border: 1px solid rgb(85, 26, 161); /* Ajuste conforme necessário */
+  background-color: white; /* Fundo do botão, ajuste conforme necessário */
+  position: absolute; /* Define position: absolute para o botão */
+  top: 50%; /* Centraliza verticalmente dentro do contêiner */
+  left: 4px; /* Ajuste conforme necessário para alinhar com o span */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  z-index: 1; /* Acima do span */
+  cursor: pointer; /* Adiciona cursor de ponteiro para interatividade */
+}
+
+#switch span {
+  display: block; /* O span precisa ter display: block para funcionar como bloco */
+  width: 64px; /* Deve corresponder à largura do contêiner pai */
+  height: 24px; /* Deve corresponder à altura do contêiner pai */
+  background: var(--surface-color); /* Certifique-se de que a variável está definida */
+  border: 1px solid var(--stroke-color); /* Ajuste conforme necessário */
   backdrop-filter: blur(4px);
-  -webkit-radius: 9999px;
+  -webkit-backdrop-filter: blur(4px); /* Para compatibilidade com Webkit */
+  border-radius: 9999px; /* Borda arredondada para o span */
+  position: relative; /* Define position: relative para o span */
+  z-index: 0; /* Fica atrás do botão */
+}
+.light #switch button {
+  right: 0;
+  left: initial;
 }
 ul{
   list-style: none;
